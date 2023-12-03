@@ -1,7 +1,9 @@
 from flask import Flask, request, jsonify
 import requests
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 def get_response(cedula):
     base_url = "https://srienlinea.sri.gob.ec/sri-catastro-sujeto-servicio-internet/rest/ConsolidadoContribuyente/existePorNumeroRuc"
